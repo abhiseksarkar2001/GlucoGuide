@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blood Test Report Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Test Report Analysis</h1>
+        <form id="bloodTestForm">
+            <label>Fasting Plasma Glucose (mg/dl): <input type="number" id="fastingGlucose" placeholder="Enter value"></label>
+            <label>Post Prandial Plasma Glucose (mg/dl): <input type="number" id="postPrandialGlucose" placeholder="Enter value"></label>
+            <label>HbA1C%: <input type="number" id="hba1c" placeholder="Enter value"></label>
+            <label>Random Plasma Glucose (mg/dl): <input type="number" id="randomGlucose" placeholder="Enter value"></label>
+            <button type="button" onclick="submitBloodTest()">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

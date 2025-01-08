@@ -1,0 +1,39 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F6F0;
+    color: black;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+.start-button, .yes-button, .no-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.start-button:hover, .yes-button:hover, .no-button:hover {
+    background-color: darkred;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    margin-top: 20px;
+}

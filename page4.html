@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Risk Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Risk Calculator</h1>
+        <form id="riskCalculatorForm">
+            <label>Physical Activity:
+                <select id="physicalActivity" required>
+                    <option value="a">Exercise (regular) + strenuous work</option>
+                    <option value="b">Exercise (regular) or strenuous work</option>
+                    <option value="c">No Exercise or strenuous work</option>
+                </select>
+            </label>
+            <label>Family Diabetes History:
+                <select id="familyHistory" required>
+                    <option value="a">No family member</option>
+                    <option value="b">Grandparent, aunt, uncle, or first cousin</option>
+                    <option value="c">Brother, sister, or own child</option>
+                    <option value="d">Either parent</option>
+                    <option value="e">Both parents</option>
+                </select>
+            </label>
+            <label>Waist Circumference (cm): <input type="number" id="waist" required></label>
+            <label>Hypertension: 
+                <select id="hypertension" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+            <label>Medication for High Blood Sugar: 
+                <select id="highBloodSugarMed" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+            <label>Vegetable/Fruit Intake:
+                <select id="fruitIntake" required>
+                    <option value="everyday">Everyday</option>
+                    <option value="not_everyday">Not Everyday</option>
+                </select>
+            </label>
+            <label>High Blood Glucose History:
+                <select id="highBloodGlucose" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="never_checked">Never checked</option>
+                </select>
+            </label>
+            <button type="button" onclick="submitRiskForm()">Submit</button>
+        </form>
+    </div>
+    <script>
+        // Function to save form data and calculate risk
+        function submitRiskForm() {
+            // Retrieve data from the form
+            const physicalActivity = document.getElementById('physicalActivity').value;
+            const familyHistory = document.getElementById('familyHistory').value;
+            const waist = document.getElementById('waist').value;
+            const hypertension = document.getElementById('hypertension').value;
+            const highBloodSugarMed = document.getElementById('highBloodSugarMed').value;
+            const fruitIntake = document.getElementById('fruitIntake').value;
+            const highBloodGlucose = document.getElementById('highBloodGlucose').value;
+
+            // Store data in session storage
+            sessionStorage.setItem('physicalActivity', physicalActivity);
+            sessionStorage.setItem('familyHistory', familyHistory);
+            sessionStorage.setItem('waist', waist);
+            sessionStorage.setItem('hypertension', hypertension);
+            sessionStorage.setItem('highBloodSugarMed', highBloodSugarMed);
+            sessionStorage.setItem('fruitIntake', fruitIntake);
+            sessionStorage.setItem('highBloodGlucose', highBloodGlucose);
+
+            // Debugging: Check stored values
+            console.log("Form Data Saved:", {
+                physicalActivity, familyHistory, waist, hypertension, highBloodSugarMed, fruitIntake, highBloodGlucose
+            });
+
+            // Call the calculateRisk function
+            calculateRisk();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

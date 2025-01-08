@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">GlucoGuide</h1>
+        <p class="tagline">know your risk, take control</p>
+        <h2>Results:</h2>
+        <p>Name: <span id="resultName"></span></p>
+        <p>Age: <span id="resultAge"></span></p>
+        <p>Height: <span id="resultHeight"></span> m, Weight: <span id="resultWeight"></span> kg</p>
+        <p>BMI: <span id="resultBMI"></span></p>
+        <p id="bmiComment"></p>
+        <p>Diabetes Risk Scores:</p>
+        <p>IDRS: <span id="resultIDRS"></span></p>
+        <p id="idrsComment"></p>
+        <p>ADA: <span id="resultADA"></span></p>
+        <p id="adaComment"></p>
+        <p>FINDRISC: <span id="resultFINDRISC"></span></p>
+        <p id="findriscComment"></p>
+
+        <h3>Blood Sugar Test Report:</h3>
+        <div id="bloodSugarReport"></div>
+
+        <button onclick="downloadPDF()">Download Prescription</button>
+        <button onclick="location.href='index.html'">Take Another Test</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
